@@ -1,0 +1,97 @@
+{
+  "name": "rbt-simple-scoreboard",
+  "version": "0.0.0",
+  "description": "A NodeCG bundle to create and maintain scoreboards.",
+  "private": true,
+  "author": {
+    "name": "Resi Respati",
+    "email": "resir014@gmail.com",
+    "url": "https://resir014.xyz/"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "starter-kit",
+    "nodecg-bundle"
+  ],
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Unlicense",
+  "scripts": {
+    "clean": "rimraf dashboard graphics",
+    "build": "yarn clean && cross-env NODE_ENV=production webpack",
+    "start": "yarn watch",
+    "watch": "cross-env NODE_ENV=development webpack --watch"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.12",
+    "@preact/signals-react": "^1.2.1",
+    "immer": "^9.0.16",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/react": "^17.0.49",
+    "@types/react-dom": "^17.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "autoprefixer": "^10.4.12",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.26.0",
+    "eslint-config-kentcdodds": "^20.4.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.2",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "tailwindcss": "^3.2.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "nodecg": {
+    "compatibleRange": "^1.9.0",
+    "dashboardPanels": [
+      {
+        "name": "score-editor",
+        "title": "Score Editor",
+        "file": "score-editor.html",
+        "width": 5,
+        "headerColor": "#68717b",
+        "workspace": "Scoreboard"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "scoreboard.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  }
+}
