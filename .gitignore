@@ -3,7 +3,7 @@
 /graphics/
 
 # NodeCG extension file
-extension.js
+extension.js*
 
 # npm lockfile (since we use yarn, this can be ignored)
 package-lock.json
